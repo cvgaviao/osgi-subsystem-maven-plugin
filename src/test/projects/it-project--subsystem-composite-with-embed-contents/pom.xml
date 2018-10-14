@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- #%L
+  Maven Plugin for OSGi Subsystem Archive Generation
+  %%
+  Copyright (C) 2012 - 2017 Cristiano Gavião, C8 Technology ME
+  %%
+  This 
+    program and the accompanying materials are made available under the terms 
+    of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0 
+    which accompanies this distribution. The Eclipse Public License is available 
+    at http://www.eclipse.org/legal/epl-v10.html and the Eclipse Distribution 
+    License is available at http://www.eclipse.org/org/documents/edl-v10.php.
+  #L% -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.c8tech.tools</groupId>
+    <artifactId>test-subsystem-composite-with-embedded-contents</artifactId>
+    <packaging>osgi.subsystem.composite</packaging>
+    <version>0.1.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.1</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>br.com.c8tech.tools</groupId>
+                <artifactId>osgi-subsystem-maven-plugin</artifactId>
+                <version>${it-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <verbose>true</verbose>
+                    <optionalConsidered>true</optionalConsidered>
+                    <allowComputeSubsystemContent>true</allowComputeSubsystemContent>
+                    <manifestScopes>
+                        <manifestScope>
+                            compile
+                        </manifestScope>
+                        <manifestScope>
+                            provided
+                        </manifestScope>
+                    </manifestScopes>
+                    <embeddableScopes>
+                        <embeddableScope>
+                            compile
+                        </embeddableScope>
+                    </embeddableScopes>
+                    <excludedArtifacts>
+                        <excludedArtifact>
+                            ch.qos.logback:logback-core
+                        </excludedArtifact>
+                        <excludedArtifact>
+                            org.slf4j:slf4j-simple
+                        </excludedArtifact>
+                    </excludedArtifacts>
+                    <transitiveConsidered>false</transitiveConsidered>
+                    <manifest>
+                        <subsystemContent>
+                           com.c8tech.runtime.kernel.lib;type=osgi.bundle;version="[0.1.1.20170424014114,0.1.1.20170424014114]";resolution:=mandatory
+                        </subsystemContent>
+                        <provisionPolicy>acceptDependencies</provisionPolicy>
+                        <exportPackage>one.package.to.export</exportPackage>
+                        <importPackage>one.package.to.import</importPackage>
+                        <preferredProvider>anBundle;type=osgi.bundle</preferredProvider>
+                        <provideCapability>UI</provideCapability>
+                        <subsystemExportService>one.service.to.Export</subsystemExportService>
+                        <provideCapability>lunifera.kernel;version:Version=0.0.1</provideCapability>
+                        <requireCapability>Container;version:Version=0.0.1</requireCapability>
+                        <subsystemImportService>one.service.to.Import</subsystemImportService>
+                        <requireBundle>com.c8tech.runtime.kernel.lib</requireBundle>
+                    </manifest>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

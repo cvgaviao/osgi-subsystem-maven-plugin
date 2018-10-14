@@ -1,0 +1,52 @@
+Manifest-Version: 1.0
+Subsystem-ImportService: one.service.to.Import;effective:=active;versi
+ on=0.6.0;resolution:=mandatory;cardinality:=single
+Subsystem-Localization: OSGI-INF/l10n/subsystem2
+Subsystem-Content: org.acme.billing.impl;version="[1.0.0,1.0.0]";start
+ -order:=0;resolution:=mandatory;type=osgi.bundle, com.c8tech.anotherB
+ undle;type=osgi.bundle;version="[1.0.0,1.0.0]";resolution:=mandatory,
+  org.acme.billing.credit.subsystem;version="[1.0.0,1.0.0]";start-orde
+ r:=0;resolution:=mandatory;type=osgi.subsystem.composite, com.c8tech.
+ subsystem.composite;type=osgi.subsystem.composite;version="[0.1.0,0.1
+ .0]";resolution:=mandatory, com.c8tech.bundle;type=osgi.bundle;versio
+ n="[1.8.4,1.8.4]";resolution:=mandatory
+Subsystem-Vendor: C8Tech
+Subsystem-Version: 1.0.0
+Subsystem-DocURL: http://www.example.com/Firewall/doc
+Require-Bundle: com.c8tech.aBundle;bundle-version="0.0.0";visibility:=
+ private;resolution:=mandatory
+Subsystem-Name: Subsystem Archive Generator
+Subsystem-Icon: /icons/acme-logo.png; size=64
+Import-Package: one.package.to.import;version="0.0.0";resolution:=mand
+ atory,one.package.to.import3;version="0.0.0";resolution:=mandatory,on
+ e.package.to.import2;version="[0.6.0,1.0.0)";resolution:=mandatory
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+ ;effective:=resolve;resolution:=mandatory;cardinality:=single,osgi.se
+ rvice;filter:="(objectClass=com.c8tech.runtime.kernel.controller.api.
+ applications.ApplicationManagementService)";effective:=active;resolut
+ ion:=mandatory;cardinality:=single,osgi.service;filter:="(objectClass
+ =com.c8tech.runtime.kernel.controller.spi.ControllerCategoryService)"
+ ;effective:=active;resolution:=mandatory;cardinality:=single,osgi.ext
+ ender;filter:="(&(osgi.extender=osgi.component)(version>=1.2.0)(!(ver
+ sion>=2.0)))";effective:=resolve;resolution:=mandatory;cardinality:=s
+ ingle
+Subsystem-SymbolicName: subsystem.maven.plugin
+Subsystem-ExportService: one.service.to.Export;version=0.6.0
+Subsystem-ManifestVersion: 1.0.0
+Provide-Capability: osgi.service;effective:=resolve;objectClass:List<S
+ tring>="com.c8tech.runtime.kernel.controller.spi.commands.ConsoleComm
+ andService",com.c8tech.controller;effective:=resolve;category:String=
+ "applications";version:Version="0.1.1",osgi.service;effective:=resolv
+ e;objectClass:List<String>="com.c8tech.runtime.kernel.controller.api.
+ applications.ApplicationManagementService,com.c8tech.runtime.kernel.c
+ ontroller.spi.ControllerServiceCallback"
+Export-Package: one.package.to.export;version=0.6.0,one.package.to.exp
+ ort2;version=0.6.0,one.package.to.export3;version=0.0.0
+Subsystem-Copyright: Cristiano Gavião (c) 2015-2025
+Subsystem-Category: Generator,OSGi
+Subsystem-Description: A subsystem to test the generator
+Subsystem-License: http://www.eclipse.org/org/documents/edl-v10.php
+Subsystem-Type: osgi.subsystem.composite;provision-policy:=rejectDepen
+ dencies
+Subsystem-ContactAddress: r. X number 100
+

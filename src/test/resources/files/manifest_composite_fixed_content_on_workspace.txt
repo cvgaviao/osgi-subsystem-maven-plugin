@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Subsystem-Localization: OSGI-INF/l10n/subsystem2
+Subsystem-Content: slf4j.api;type=osgi.bundle;version="[1.7.25,1.7.25]
+ ";resolution:=mandatory, com.c8tech.subsystem.composite;type=osgi.sub
+ system.composite;version="[0.1.0,0.1.0]";resolution:=mandatory
+Subsystem-Vendor: C8Tech
+Subsystem-Version: 1.0.0
+Preferred-Provider: anBundle;type=osgi.bundle;version="0.0.0"
+Subsystem-DocURL: http://www.example.com/Firewall/doc
+Require-Bundle: com.c8tech.runtime.kernel.lib;bundle-version="0.0.0";v
+ isibility:=private;resolution:=mandatory
+Subsystem-Name: Subsystem Archive Generator
+Subsystem-Icon: /icons/acme-logo.png; size=64
+Import-Package: org.slf4j.impl;version="1.6.0";resolution:=mandatory
+Subsystem-SymbolicName: subsystem.maven.plugin
+Subsystem-ManifestVersion: 1.0.0
+Export-Package: org.slf4j.spi;version=1.7.25,org.slf4j.helpers;version
+ =1.7.25,org.slf4j;version=1.7.25,org.slf4j.event;version=1.7.25
+Subsystem-Copyright: Cristiano Gavião (c) 2015-2025
+Subsystem-Category: Generator,OSGi
+Subsystem-Description: A subsystem to test the generator
+Subsystem-License: http://www.eclipse.org/org/documents/edl-v10.php
+Subsystem-Type: osgi.subsystem.composite;provision-policy:=rejectDepen
+ dencies
+Subsystem-ContactAddress: r. X number 100
+

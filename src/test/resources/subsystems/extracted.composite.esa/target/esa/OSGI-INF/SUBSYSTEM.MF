@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Subsystem-Version: 0.1.0
+Subsystem-SymbolicName: com.c8tech.subsystem.composite
+Subsystem-Type: osgi.subsystem.composite;provision-policy:=rejectDepen
+ dencies
+Subsystem-ManifestVersion: 1.0.0
+Subsystem-ExportService: one.service.to.Export;version="0.6.0"
+Subsystem-ImportService: one.service.to.Import;version="0.6.0"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
