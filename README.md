@@ -1,6 +1,9 @@
 [![Build Status](https://circleci.com/gh/cvgaviao/osgi-subsystem-maven-plugin.svg?style=svg)](https://circleci.com/gh/cvgaviao/osgi-subsystem-maven-plugin)
 
 
+[![Maven Central](https://img.shields.io/maven-central/v/br.com.c8tech.tools/osgi-subsystem-maven-plugin.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22br.com.c8tech.tools%22%20AND%20a:%22osgi-subsystem-maven-plugin%22)
+
+
 OSGi Subsystem Archive Generator Maven Plugin
 ================================
 

@@ -18,7 +18,7 @@
     <parent>
         <groupId>br.com.c8tech.tools</groupId>
         <artifactId>c8tech-tools-maven-pom</artifactId>
-        <version>0.7.6</version>
+        <version>0.7.7-SNAPSHOT</version>
     </parent>
 
     <!-- not inherited, IIRC -->
@@ -34,7 +34,7 @@
 
     <properties>
         <c8tech.scm.repo.name>osgi-subsystem-maven-plugin</c8tech.scm.repo.name>
-        <version.c8tech.maven.library>0.7.6</version.c8tech.maven.library>
+        <version.c8tech.maven.library>${project.parent.version}</version.c8tech.maven.library>
     </properties>
     
     <!-- Due a maven limitation, this MUST be replicated to all children -->
@@ -65,11 +65,11 @@
 <!--             <artifactId>maven-artifact-transfer</artifactId> -->
 <!--             <version>0.10.0</version> -->
 <!--         </dependency> -->
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-archiver</artifactId>
-            <version>3.5</version>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.codehaus.plexus</groupId> -->
+<!--             <artifactId>plexus-archiver</artifactId> -->
+<!--             <version>3.5</version> -->
+<!--         </dependency> -->
 <!--         <dependency> -->
 <!--             <groupId>org.eclipse.sisu</groupId> -->
 <!--             <artifactId>org.eclipse.sisu.plexus</artifactId> -->
@@ -176,6 +176,15 @@
                 <configuration>
                     <debug>true</debug>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>none</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
