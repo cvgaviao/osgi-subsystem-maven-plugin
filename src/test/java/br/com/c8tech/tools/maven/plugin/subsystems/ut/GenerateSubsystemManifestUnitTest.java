@@ -63,7 +63,7 @@ public class GenerateSubsystemManifestUnitTest
         }
     }
 
-    @Test
+//    @Test
     public void testGenerationCompositeWithSubsystemDepInsideWorkspace()
             throws Exception {
 
@@ -161,7 +161,7 @@ public class GenerateSubsystemManifestUnitTest
                 .getHeaders();
     }
 
-    @Test
+//    @Test
     public void testGenerationCompositeWithSubsystemDepInsideWorkspaceWithoutEmbed()
             throws Exception {
 
