@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * Copyright © 2015-2018 Cristiano Gavião, C8 Technology ME.
+ * Copyright © 2015-2019 Cristiano Gavião, C8 Technology ME.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -71,7 +71,7 @@ import io.takari.incrementalbuild.aggregator.InputSet;
  * <p>
  *
  */
-@Mojo(name = "generateSubsystemManifest", defaultPhase = LifecyclePhase.COMPILE,
+@Mojo(name = "generateSubsystemManifest", defaultPhase = LifecyclePhase.PROCESS_RESOURCES,
         requiresProject = true, inheritByDefault = true, threadSafe = true,
         requiresDependencyCollection = ResolutionScope.COMPILE,
         requiresDependencyResolution = ResolutionScope.COMPILE)
