@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * Copyright © 2015-2018 Cristiano Gavião, C8 Technology ME.
+ * Copyright © 2015-2019 Cristiano Gavião, C8 Technology ME.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -68,7 +68,9 @@ public class MojoPackSubsystemArchive extends AbstractSubsystemMojo {
     /**
      *
      * @param project
+     *            The reference to the project being built.
      * @param pAggregatorBuildContext
+     *            The build context being used.
      */
     @Inject
     public MojoPackSubsystemArchive(MavenProject project,
@@ -89,9 +91,9 @@ public class MojoPackSubsystemArchive extends AbstractSubsystemMojo {
      * Generate the ESA file for the current project.
      *
      * @throws MojoExecutionException
-     *                                    if an error occurred while building
-     *                                    the ESA file
+     *             when an error occurred while building the ESA file
      * @throws MojoFailureException
+     *             when a failure occurred while building the ESA file
      */
     @Override
     public void executeMojo()

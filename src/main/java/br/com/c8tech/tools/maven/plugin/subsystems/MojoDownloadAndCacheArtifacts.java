@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * Copyright © 2015-2018 Cristiano Gavião, C8 Technology ME.
+ * Copyright © 2015-2019 Cristiano Gavião, C8 Technology ME.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -34,22 +34,25 @@ import br.com.c8tech.tools.maven.osgi.lib.mojo.incremental.BuildContextWithUrl;
  * <p>
  * <br>
  * The artifacts will be filtered by:
+ * <ul>
  * <li>One or more scopes specified in the parameters: {@link #manifestScopes}
  * and {@link #embeddableScopes}.</li>
  * <li>The bundle types specified in the parameter:
- * {@link #validBundleType}</li>
+ * {@link #addValidBundleType(String)}</li>
  * <li>The subsystem types specified in the parameter:
- * {@link #validSubsystemType}</li>
+ * {@link #addValidSubsystemType(String)}</li>
  * <li>The presence of a valid artifact's manifest file on each filter
  * above.</li>
+ * </ul>
  * <p>
  * <br>
  * It was not designed to be used stand alone. It is an integrated part of the
  * default lifecycle of the three provided packaging types:
+ * <ul>
  * <li><b>osgi.subsystem.application</b>
  * <li><b>osgi.subsystem.composite</b>
  * <li><b>osgi.subsystem.feature</b>
- *
+ * </ul>
  */
 @Mojo(name = "downloadAndCacheArtifacts",
         defaultPhase = LifecyclePhase.GENERATE_RESOURCES, threadSafe = true,

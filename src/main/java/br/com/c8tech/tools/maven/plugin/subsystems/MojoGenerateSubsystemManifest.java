@@ -68,7 +68,6 @@ import io.takari.incrementalbuild.aggregator.InputSet;
  * This mojo is aimed to generate an OSGi Subsystem manifest file for the
  * current project based on the cached artifacts and the instructions passed to
  * the plugin.
- * <p>
  *
  */
 @Mojo(name = "generateSubsystemManifest", defaultPhase = LifecyclePhase.PROCESS_RESOURCES,
@@ -886,7 +885,7 @@ public class MojoGenerateSubsystemManifest extends AbstractSubsystemMojo {
      *
      * This method is used to set default values to subsystem manifest by sisu.
      *
-     * @param manifest
+     * @param manifest The subsystem manifest configuration xml tag.
      */
     public void setManifest(final PojoSubsystemManifestConfiguration manifest) {
         this.manifest = manifest;
