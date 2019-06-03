@@ -28,7 +28,7 @@
 	<artifactId>osgi-subsystem-maven-plugin</artifactId>
 	<name>OSGi Subsystem Archive Generator Maven Plugin</name>
 	<description>A maven plugin that is aimed to generate an OSGi Subsystem archive (.esa) and its manifest file based on the instructions defined in the POM.</description>
-	<version>0.7.0</version>
+	<version>0.7.1-SNAPSHOT</version>
 	<packaging>takari-maven-plugin</packaging>
 
 	<properties>
@@ -42,7 +42,7 @@
 		<connection>${c8tech.scm.connection}</connection>
 		<developerConnection>${c8tech.scm.connection.dev}</developerConnection>
 		<url>${c8tech.scm.url}</url>
-		<tag>v0.7.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
 		<site>
