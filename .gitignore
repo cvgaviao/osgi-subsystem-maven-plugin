@@ -25,6 +25,7 @@ hs_err_pid*
 /bin/
 .DS_Store
 .classpath
+.factorypath
 .settings
 src-gen/
 .project
@@ -33,3 +34,4 @@ src-gen/
 dev/
 license-header-epl-v10.txt
 
+/.gitignore

@@ -18,7 +18,7 @@
                                 ${project.groupId}:${project.artifactId}:${project.version}:downloadAndCacheArtifacts
                             </generate-resources>
                             <process-resources>
-                                org.apache.maven.plugins:maven-resources-plugin:${version.maven-resources}:resources,
+                                org.apache.maven.plugins:maven-resources-plugin:${maven-resources.version}:resources,
                                 ${project.groupId}:${project.artifactId}:${project.version}:generateSubsystemManifest
                             </process-resources>
                             <package>
@@ -52,7 +52,7 @@
                                 ${project.groupId}:${project.artifactId}:${project.version}:downloadAndCacheArtifacts
                             </generate-resources>
                             <process-resources>
-                                org.apache.maven.plugins:maven-resources-plugin:${version.maven-resources}:resources,
+                                org.apache.maven.plugins:maven-resources-plugin:${maven-resources.version}:resources,
                             </process-resources>
                             <prepare-package>
                                 ${project.groupId}:${project.artifactId}:${project.version}:generateSubsystemManifest
@@ -88,7 +88,7 @@
                                 ${project.groupId}:${project.artifactId}:${project.version}:downloadAndCacheArtifacts
                             </generate-resources>
                             <process-resources>
-                                org.apache.maven.plugins:maven-resources-plugin:${version.maven-resources}:resources,
+                                org.apache.maven.plugins:maven-resources-plugin:${maven-resources.version}:resources,
                             </process-resources>
                             <prepare-package>
                                 ${project.groupId}:${project.artifactId}:${project.version}:generateSubsystemManifest
