@@ -1,15 +1,15 @@
 
-<!-- ========================================================================== -->
-<!-- Copyright © 2015-2019 Cristiano Gavião, C8 Technology ME. -->
-<!-- -->
-<!-- All rights reserved. This program and the accompanying materials -->
-<!-- are made available under the terms of the Eclipse Public License v1.0 -->
-<!-- which accompanies this distribution, and is available at -->
-<!-- http://www.eclipse.org/legal/epl-v10.html -->
-<!-- -->
-<!-- Contributors: -->
-<!-- Cristiano Gavião (cvgaviao@c8tech.com.br)- initial API and implementation -->
-<!-- ========================================================================== -->
+<!-- ==========================================================================  -->
+<!-- Copyright © 2015-2019 Cristiano Gavião, C8 Technology ME.                         -->
+<!--                                                                             -->
+<!-- All rights reserved. This program and the accompanying materials            -->
+<!-- are made available under the terms of the Eclipse Public License v1.0       -->
+<!-- which accompanies this distribution, and is available at                    -->
+<!-- http://www.eclipse.org/legal/epl-v10.html                                   -->
+<!--                                                                             -->
+<!-- Contributors:                                                               -->
+<!-- Cristiano Gavião (cvgaviao@c8tech.com.br)- initial API and implementation   -->
+<!-- ==========================================================================  -->
 
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -30,7 +30,7 @@
 	<artifactId>osgi-subsystem-maven-plugin</artifactId>
 	<name>OSGi Subsystem Archive Generator Maven Plugin</name>
 	<description>A maven plugin that is aimed to generate an OSGi Subsystem archive (.esa) and its manifest file based on the instructions defined in the POM.</description>
-	<version>0.6.1-SNAPSHOT</version>
+	<version>0.7.1-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 
 	<properties>
