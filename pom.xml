@@ -207,8 +207,7 @@
 				<artifactId>maven-plugin-plugin</artifactId>
 				<version>${mavenPluginPlugin.version}</version>
 				<configuration>
-					<!-- <goalPrefix>maven-archetype-plugin</goalPrefix> -->
-					<!-- <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound> -->
+					<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
 				</configuration>
 				<executions>
 					<execution>
