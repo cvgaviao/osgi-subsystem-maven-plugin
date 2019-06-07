@@ -32,6 +32,5 @@ src-gen/
 /META-INF/
 /OSGI-INF/
 dev/
-license-header-epl-v10.txt
 
 /.gitignore
